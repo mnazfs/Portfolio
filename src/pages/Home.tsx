@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import Profile from "../images/profile.png";
+import Profile from "../images/Profile.png";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 
