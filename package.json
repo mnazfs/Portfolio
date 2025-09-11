@@ -6,7 +6,7 @@
   "homepage": "https://mnazfs.github.io/Portfolio",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build",
+    "build": "react-scripts build",
     "lint": "eslint .",
     "preview": "vite preview",
     "start": "react-scripts start",
