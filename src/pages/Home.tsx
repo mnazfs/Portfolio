@@ -6,7 +6,7 @@ import { SiGmail } from "react-icons/si";
 export function Home () {
     return (
         <>
-        <div className="grid grid-cols-2 w-screen h-screen overflow-hidden">
+        <div className="grid grid-cols-2 max-w-screen h-screen overflow-hidden">
             <div className="bg-gray-200 p-4 flex items-center justify-center text-shadow-white">
             <div className="justify-center grid grid-rows-4 align-start gap-5">
                 <motion.p className="font-montserrat text-2xl"
@@ -66,14 +66,27 @@ export function Home () {
             </div>
             <div className="absolute top-0 bottom-0 left-1/2 w-25 h-screen bg-black transform -skew-x-5 origin-top shadow-xl"/>
         </div>
-        <div className="bg-gray-200">
-            <h1 className="font-exo text-4xl p-5">About Me</h1>
-            <p className="font-montserrat text-lg p-5">
+        <div className="bg-gray-200 grid grid-cols-3">
+            <motion.div className="flex items-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}>
+                <h1 className="font-exo text-4xl p-5">About Me</h1>
+            </motion.div>
+            <div className="col-span-2">
+            <motion.p className="font-montserrat text-lg p-5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.3 }}>
                 Aspiring Software Developer with a strong foundation in computer science principles, programming, and full-stack web development. Proficient in designing and implementing efficient algorithms, solving complex problems, and writing clean, optimized code. Experienced in developing practical projects, including web-based applications, database systems, and IoT/microcontroller-based solutions, which demonstrate both technical expertise and creativity.
-            </p>
-            <p className="font-montserrat text-lg p-5">
+            </motion.p>
+            <motion.p className="font-montserrat text-lg p-5"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}>
                 Adaptable and quick to learn emerging technologies, with hands-on knowledge in the MERN stack, Python, C, Java, and microcontroller programming. Skilled at collaborating in interdisciplinary teams, managing project workflows, and delivering solutions under deadlines. Passionate about leveraging technology to create impactful applications that improve efficiency, accessibility, and user experience.
-            </p>
+            </motion.p>
+            </div>
         </div>
         </>
     );
