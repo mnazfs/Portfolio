@@ -22,7 +22,7 @@ const Sidebar = () => {
       {/* Mobile Menu Button */}
       <button
         onClick={toggleSidebar}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-blue-900 text-white rounded-lg shadow-lg hover:bg-blue-800 transition-colors"
+        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-700 text-white rounded-lg shadow-lg hover:bg-blue-800 transition-colors"
       >
         {isExpanded ? <X size={24} /> : <Menu size={24} />}
       </button>
@@ -31,7 +31,7 @@ const Sidebar = () => {
       <div className={`fixed left-0 top-0 h-full bg-black text-white transition-all duration-300 z-40 ${
         isExpanded ? 'w-64' : 'w-16'
       } lg:w-64`}>
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col">
           {/* Logo/Brand */}
           <div className="p-4">
             <div className={`flex items-center ${isExpanded || window.innerWidth >= 1024 ? 'justify-start' : 'justify-center'}`}>
