@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { Home, User, Code, FolderOpen, Mail, Menu, X } from 'lucide-react';
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
-  const location = useLocation();
 
   const navItems = [
     { path: '/', label: 'Intro', icon: Home },
@@ -29,18 +28,18 @@ const Sidebar = () => {
       </button>
 
       {/* Sidebar */}
-      <div className={`fixed left-0 top-0 h-full bg-blue-900 text-white transition-all duration-300 z-40 ${
+      <div className={`fixed left-0 top-0 h-full bg-black text-white transition-all duration-300 z-40 ${
         isExpanded ? 'w-64' : 'w-16'
       } lg:w-64`}>
         <div className="flex flex-col h-full">
           {/* Logo/Brand */}
-          <div className="p-4 border-b border-blue-800">
+          <div className="p-4">
             <div className={`flex items-center ${isExpanded || window.innerWidth >= 1024 ? 'justify-start' : 'justify-center'}`}>
-              <div className="w-8 h-8 bg-cyan-400 rounded-lg flex items-center justify-center font-bold text-blue-900">
-                D
+              <div className="w-8 h-8 bg-gray-700 rounded-lg flex items-center justify-center font-bold text-white">
+                N
               </div>
               <span className={`ml-3 text-lg font-bold ${!isExpanded && window.innerWidth < 1024 ? 'hidden' : 'lg:block'}`}>
-                Developer
+                Naseef
               </span>
             </div>
           </div>
@@ -54,8 +53,8 @@ const Sidebar = () => {
                     to={path}
                     onClick={() => setIsExpanded(false)}
                     className={({ isActive }) =>
-                      `flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-blue-800 ${
-                        isActive ? 'bg-cyan-600 text-white' : 'text-blue-100'
+                      `flex items-center p-3 rounded-lg transition-all duration-200 hover:bg-gray-700 ${
+                        isActive ? 'bg-gray-500 text-white' : 'text-blue-100'
                       } ${!isExpanded && window.innerWidth < 1024 ? 'justify-center' : 'justify-start'}`
                     }
                   >
@@ -68,13 +67,6 @@ const Sidebar = () => {
               ))}
             </ul>
           </nav>
-
-          {/* Footer Info */}
-          <div className={`p-4 border-t border-blue-800 ${!isExpanded && window.innerWidth < 1024 ? 'hidden' : 'lg:block'}`}>
-            <p className="text-sm text-blue-200 text-center">
-              © 2025 Portfolio
-            </p>
-          </div>
         </div>
       </div>
 

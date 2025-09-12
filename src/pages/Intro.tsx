@@ -1,4 +1,4 @@
- import { ChevronDown, Download } from 'lucide-react';
+ import { Download } from 'lucide-react';
  import Profile from '../images/Naseef.jpg'
  import { motion } from 'framer-motion';
 
@@ -39,24 +39,33 @@ const Intro = () => {
                   Muhammed Naseef
                 </motion.h1>
               
-              <h2 className="text-xl lg:text-2xl text-gray-600 mb-6 font-medium">
+              <motion.h2 className="text-xl lg:text-2xl text-gray-600 mb-6 font-medium"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 }}>
                 Computer Engineer | Fullstack Developer
-              </h2>
+              </motion.h2>
               
-              <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              <motion.p className="text-lg text-gray-700 mb-8 leading-relaxed"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 }}>
                 Passionate about creating innovative solutions through code. 
                 Specializing in modern web technologies, system design, and 
                 building scalable applications that make a difference.
-              </p>
+              </motion.p>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <button className="bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-700 hover:to-cyan-600 transition-all duration-200 flex items-center justify-center">
-                  <Download size={20} className="mr-2" />
-                  Download Resume
-                </button>
-                <button className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-all duration-200">
-                  View Projects
-                </button>
+                <motion.a
+                href="/Resume.pdf"
+                download="Naseef_Resume.pdf"
+                className="bg-gradient-to-r from-gray-600 to-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors duration-300 flex items-center justify-center"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: 0.8 }}>
+                    <Download size={20} className="mr-2" />
+                    Download Resume
+                </motion.a>
               </div>
             </div>
           </div>
