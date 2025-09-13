@@ -1,9 +1,12 @@
-import { Code, Database, Wrench, Globe } from 'lucide-react';
+import { Code, Database, Wrench, Globe, Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Assembly from '../assets/assembly-svgrepo-com.svg';
 import API from '../assets/api-app-svgrepo-com.svg';
 import Render from '../assets/render-community-large-icon.svg';
+import ML from '../assets/machine-learning-svgrepo-com.svg';
+import DL from '../assets/deep-learning-svgrepo-com.svg';
 
+// Type definitions
 type Skill = {
   name: string;
   svg: string;
@@ -16,6 +19,7 @@ type SkillCategory = {
   skills: Skill[];
 };
 
+// All skill categories
 const skillCategories: SkillCategory[] = [
   {
     title: 'Programming Languages',
@@ -33,24 +37,28 @@ const skillCategories: SkillCategory[] = [
     ]
   },
   {
-    title: 'Frameworks & Libraries',
+    title: 'Frameworks, Libraries & Databases',
     icon: Globe,
     color: 'blue',
     skills: [
       { name: 'React.js', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
       { name: 'Node.js', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
       { name: 'Express.js', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg' },
-      { name: 'REST APIs', svg: API }
-    ]
-  },
-  {
-    title: 'Databases',
-    icon: Database,
-    color: 'green',
-    skills: [
+      { name: 'Tailwind CSS', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+      { name: 'REST APIs', svg: API },
       { name: 'MySQL', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg' },
       { name: 'MongoDB', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg' },
       { name: 'Firebase', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' }
+    ]
+  },
+  {
+    title: 'Specialized Domains',
+    icon: Cpu,
+    color: 'purple',
+    skills: [
+      { name: 'Machine Learning', svg: ML },
+      { name: 'Deep Learning', svg: DL },
+      { name: 'Microcontroller Programming', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' }
     ]
   },
   {
@@ -66,12 +74,14 @@ const skillCategories: SkillCategory[] = [
   }
 ];
 
+// Utility: color classes
 const getColorClasses = (color: string): string => {
   const colors: Record<string, string> = {
     blue: 'from-blue-500 to-blue-600 bg-blue-100 text-blue-600',
     cyan: 'from-cyan-500 to-cyan-600 bg-cyan-100 text-cyan-600',
     indigo: 'from-indigo-500 to-indigo-600 bg-indigo-100 text-indigo-600',
-    green: 'from-green-500 to-green-600 bg-green-100 text-green-600'
+    green: 'from-green-500 to-green-600 bg-green-100 text-green-600',
+    purple: 'from-purple-500 to-purple-600 bg-purple-100 text-purple-600'
   };
   return colors[color] || colors.blue;
 };
@@ -147,11 +157,11 @@ const Skills = () => {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
+            'Problem Solving',
             'Agile Development',
             'System Design',
             'Code Review',
-            'Team Leadership',
-            'Problem Solving',
+            'Team Spirit',
             'Technical Writing',
             'Performance Optimization',
             'Security Best Practices',

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -53,9 +54,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                <p className="text-gray-600">your.email@example.com</p>
+                <p className="text-gray-600">mnaseef2k02@gmail.com</p>
                 <a 
-                  href="mailto:your.email@example.com"
+                  href="mailto:mnaseef2k02@gmail.com"
                   className="text-blue-600 hover:text-blue-700 transition-colors"
                 >
                   Send a message
@@ -69,9 +70,9 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                <p className="text-gray-600">+1 (555) 123-4567</p>
+                <p className="text-gray-600">+91 6238 062 964</p>
                 <a 
-                  href="tel:+15551234567"
+                  href="tel:+916238062964"
                   className="text-cyan-600 hover:text-cyan-700 transition-colors"
                 >
                   Give me a call
@@ -85,7 +86,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
-                <p className="text-gray-600">San Francisco, CA</p>
+                <p className="text-gray-600">Thodupuzha, India</p>
                 <p className="text-sm text-gray-500">Available for remote work</p>
               </div>
             </div>
@@ -96,31 +97,31 @@ const Contact = () => {
             <h3 className="font-semibold text-gray-900 mb-4">Follow Me</h3>
             <div className="flex space-x-4">
               <a
-                href="https://github.com"
+                href="https://github.com/mnazfs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors"
                 aria-label="GitHub"
               >
-                <Github size={20} className="text-gray-700" />
+                <FaGithub size={20}/>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/v-s-muhammed-naseef-03b90221b"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-blue-100 rounded-lg hover:bg-blue-200 transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} className="text-blue-700" />
+                <FaLinkedin size={20}/>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://instagram.com/mnazfs"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-cyan-100 rounded-lg hover:bg-cyan-200 transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={20} className="text-cyan-700" />
+                <FaInstagram size={20}/>
               </a>
             </div>
           </div>
