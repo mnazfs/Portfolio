@@ -7,11 +7,13 @@ const About = () => {
       <div className="mb-12">
         <motion.h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5 }}>About Me</motion.h1>
         <motion.p className="text-xl text-gray-600 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.2 }}>
           Learn more about my journey, experience, and what drives me as a developer
         </motion.p>
@@ -21,24 +23,32 @@ const About = () => {
         <div>
           <motion.h2 className="text-2xl font-bold text-gray-900 mb-6"
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}>My Story</motion.h2>
           <div className="space-y-4 text-gray-700 leading-relaxed">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.6 }}>
-              I am an aspiring software developer with a strong foundation in programming, data structures, and algorithms. I enjoy solving problems and writing efficient code, and I thrive in environments where I can quickly adapt and contribute to collaborative teams.
+              I am an aspiring computer engineer with a strong foundation in programming, data structures, and algorithms. 
+              I enjoy solving problems and writing efficient code, and I thrive in environments where I can quickly adapt 
+              and contribute to collaborative teams.
             </motion.p>
             <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.8 }}>
-              Over time, I have developed a diverse skill set that includes full-stack development, database management, and problem-solving techniques. I am also passionate about exploring areas like intelligent systems and embedded solutions, which allow me to combine creativity with technical expertise.
+              Over time, I have developed a diverse skill set that includes full-stack development, database management, 
+              and problem-solving techniques. I am also passionate about exploring areas like intelligent systems and 
+              embedded solutions, which allow me to combine creativity with technical expertise.
             </motion.p>
             <motion.p
             initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 1 }}>
               With a passion for continuous learning, I am driven to create impactful solutions through software development and innovative technologies.
             </motion.p>
@@ -48,7 +58,8 @@ const About = () => {
         <div className="space-y-8">
           <motion.div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
           initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.5 }}>
             <div className="flex items-center mb-4">
               <GraduationCap className="text-blue-600 mr-3" size={24} />
@@ -56,8 +67,9 @@ const About = () => {
             </div>
             <motion.div className='mb-4'
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.7 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
               <h4 className="font-semibold text-gray-800">B.Tech in Computer Science and Engineering</h4>
               <p className="text-gray-600">APJ Abdul Kalam University • 2022-2026</p>
               <p className="text-gray-600">Government Engineering College Idukki</p>
@@ -65,16 +77,18 @@ const About = () => {
             </motion.div>
             <motion.div className='mb-4'
             initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
               <h4 className="font-semibold text-gray-800">Higher Secondary School</h4>
               <p className="text-gray-600">St.Mary's HSS Arakulam • 2018-2020</p>
               <p className="text-sm text-gray-500 mt-2">Percentage: 87</p>
             </motion.div>
             <motion.div className='mb-4'
             initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.1 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
               <h4 className="font-semibold text-gray-800">Technical High School</h4>
               <p className="text-gray-600">THSS of IHRD, Muttom • 2015-2018</p>
               <p className="text-sm text-gray-500 mt-2">Percentage: 98</p>
@@ -83,16 +97,18 @@ const About = () => {
 
           <motion.div className="bg-white p-6 rounded-lg shadow-lg border border-gray-200"
           initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: 0.7 }}>
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
             <div className="flex items-center mb-4">
               <Briefcase className="text-blue-600 mr-3" size={24} />
               <h3 className="text-xl font-semibold text-gray-900">Experience</h3>
             </div>
             <motion.div className='mb-4'
             initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.9 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
               <h4 className="font-semibold text-gray-800">Intern</h4>
               <p className="text-gray-600">District Collectorate, Idukki • May-July 2025</p>
               <p className="text-sm text-gray-500 mt-2">
@@ -101,8 +117,9 @@ const About = () => {
             </motion.div>
             <motion.div
             initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.1 }}>
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}>
               <h4 className="font-semibold text-gray-800">Technical Team Member</h4>
               <p className="text-gray-600">μLearn GECI • 2025 - Present</p>
               <p className="text-sm text-gray-500 mt-2">

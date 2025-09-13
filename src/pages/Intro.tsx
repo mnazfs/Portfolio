@@ -14,6 +14,7 @@ const Intro = () => {
               <motion.div className="relative mx-auto w-64 h-64 lg:w-80 lg:h-80"
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}>
                 <img
                   src={Profile}
@@ -28,6 +29,7 @@ const Intro = () => {
               <motion.h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}>
                 Hi, I'm
                 
@@ -35,6 +37,7 @@ const Intro = () => {
                 <motion.h1 className="text-4xl lg:text-6xl font-bold mb-6 block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.2 }}>
                   Muhammed Naseef
                 </motion.h1>
@@ -42,6 +45,7 @@ const Intro = () => {
               <motion.h2 className="text-xl lg:text-2xl text-gray-600 mb-6 font-medium"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.4 }}>
                 Computer Engineer | Fullstack Developer
               </motion.h2>
@@ -49,6 +53,7 @@ const Intro = () => {
               <motion.p className="text-lg text-gray-700 mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}>
                 Passionate about creating innovative solutions through code. 
                 Specializing in modern web technologies, system design, and 
@@ -62,6 +67,7 @@ const Intro = () => {
                 className="bg-gradient-to-r from-gray-600 to-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors duration-300 flex items-center justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.8 }}>
                     <Download size={20} className="mr-2" />
                     Download Resume
