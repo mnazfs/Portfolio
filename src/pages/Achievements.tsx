@@ -40,31 +40,30 @@ const Achievements = () => {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
-      <motion.div
-        className="mb-12"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Certifications & Awards
-        </h1>
-        <p className="text-xl text-gray-600 leading-relaxed">
-          A showcase of certifications and recognitions highlighting my skills,
-          achievements, and contributions.
-        </p>
-      </motion.div>
+      <div className="mb-12">
+        <motion.h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}>Certifications & Awards</motion.h1>
+        <motion.p className="text-xl text-gray-600 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}>A showcase of certifications and recognitions highlighting my skills,achievements, and contributions.
+        </motion.p>
+      </div>
 
       {/* Achievements List */}
       <div className="grid md:grid-cols-2 gap-8">
         {achievements.map((achievement, index) => (
           <motion.div
             key={achievement.id}
-            className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className="bg-white rounded-2xl shadow-lg border border-gray-200 p-6 flex flex-col items-center text-center hover:shadow-xl hover:-translate-y-1"
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: index * 0.2 }}
+            transition={{ duration: 0.6, delay: index * 0.25 }}
           >
             {/* Enlarged Animation */}
             <Lottie

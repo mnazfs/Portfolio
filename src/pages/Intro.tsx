@@ -34,7 +34,7 @@ const Intro = () => {
                 Hi, I'm
                 
               </motion.h1>
-                <motion.h1 className="text-4xl lg:text-6xl font-bold mb-6 block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
+                <motion.h1 className="font-exo text-4xl lg:text-6xl font-bold mb-6 block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
@@ -42,7 +42,7 @@ const Intro = () => {
                   Muhammed Naseef
                 </motion.h1>
               
-              <motion.h2 className="text-xl lg:text-2xl text-gray-600 mb-6 font-medium"
+              <motion.h2 className="font-montserrat text-xl lg:text-2xl text-gray-600 mb-6 font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -55,22 +55,20 @@ const Intro = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}>
-                Passionate about creating innovative solutions through code. 
-                Specializing in modern web technologies, system design, and 
-                building scalable applications that make a difference.
+                Aspiring Computer Engineer and Fullstack Developer passionate about building efficient solutions with strong foundations in algorithms and problem-solving.
               </motion.p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
                 href="/Resume.pdf"
                 download="Naseef_Resume.pdf"
-                className="bg-gradient-to-r from-gray-600 to-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors duration-300 flex items-center justify-center"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 sm:from-gray-600 sm:to-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors duration-300 flex items-center justify-center"
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.8 }}>
                     <Download size={20} className="mr-2" />
-                    Download Resume
+                    Resume
                 </motion.a>
               </div>
             </div>

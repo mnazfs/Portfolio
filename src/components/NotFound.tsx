@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import animationData from "../animations/Certificate.json";
+import animationData from "../animations/404.json";
 
 export default function NotFound() {
   return (
@@ -14,7 +14,7 @@ export default function NotFound() {
         <Lottie
           animationData={animationData}
           loop={true}
-          className="w-72 h-72"
+          className="w-100 h-100"
         />
       </motion.div>
 
@@ -34,7 +34,7 @@ export default function NotFound() {
       >
         <Link
           to="/"
-          className="mt-6 inline-block px-6 py-3 text-lg font-medium text-white bg-blue-600 rounded-2xl shadow hover:bg-blue-700 transition"
+          className="mt-6 bg-gradient-to-r from-blue-600 to-cyan-600 sm:from-gray-600 sm:to-gray-500 text-white px-8 py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-colors duration-300 flex items-center justify-center"
         >
           Go Home
         </Link>

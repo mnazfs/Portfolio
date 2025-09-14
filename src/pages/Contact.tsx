@@ -47,20 +47,22 @@ const Contact = () => {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
-      <motion.div
-        className="mb-12"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-          Get In Touch
-        </h1>
-        <p className="text-xl text-gray-600 leading-relaxed">
-          Have a project in mind or want to discuss opportunities? I'd love to
-          hear from you.
-        </p>
-      </motion.div>
+      <div className="mb-12">
+        <motion.h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}>Let's Connect</motion.h1>
+        <motion.p className="text-xl text-gray-600 leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}>
+            I'm always interested in new opportunities, whether it's a
+            freelance project, full-time position, or just a chat about
+            technology and development.
+        </motion.p>
+      </div>
 
       {/* Grid Layout */}
       <div className="grid lg:grid-cols-2 gap-12">
@@ -72,16 +74,6 @@ const Contact = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <div>
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">
-              Let's Connect
-            </h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
-              I'm always interested in new opportunities, whether it's a
-              freelance project, full-time position, or just a chat about
-              technology and development.
-            </p>
-          </div>
 
           <div className="space-y-6">
             {/* Email */}

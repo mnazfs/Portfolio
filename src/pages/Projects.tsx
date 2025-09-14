@@ -56,18 +56,19 @@ const Projects = () => {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
-      <motion.div
-        className="mb-12"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">My Projects</h1>
-        <p className="text-xl text-gray-600 leading-relaxed">
+      <div className="mb-12">
+        <motion.h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}>My Projects</motion.h1>
+        <motion.p className="text-xl text-gray-600 leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}>
           A collection of projects showcasing my skills in fullstack development, system design, and
           problem-solving
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
 
       {/* Projects Grid */}
       <div className="grid md:grid-cols-2 gap-8">
@@ -78,11 +79,11 @@ const Projects = () => {
           return (
             <motion.div
               key={project.id}
-              className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl hover:-translate-y-1"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
+              transition={{ duration: 0.5, delay: index * 0.25 }}
               whileHover={{ scale: 1.03 }}
             >
               {/* Project Image */}

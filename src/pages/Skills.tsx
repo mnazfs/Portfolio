@@ -1,4 +1,4 @@
-import { Code, Database, Wrench, Globe, Cpu } from 'lucide-react';
+import { Code, Wrench, Globe, Cpu } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Assembly from '../assets/assembly-svgrepo-com.svg';
 import API from '../assets/api-app-svgrepo-com.svg';
@@ -90,17 +90,18 @@ const Skills = () => {
   return (
     <div className="max-w-6xl mx-auto">
       {/* Header */}
-      <motion.div 
-        className="mb-12"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Skills & Expertise</h1>
-        <p className="text-xl text-gray-600 leading-relaxed">
+      <div className="mb-12">
+        <motion.h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}>Skills & Expertise</motion.h1>
+        <motion.p className="text-xl text-gray-600 leading-relaxed"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}>
           An overview of my technical and non-technical skills
-        </p>
-      </motion.div>
+        </motion.p>
+      </div>
 
       {/* Skill Categories */}
       <div className="grid lg:grid-cols-2 gap-8 mb-16">
