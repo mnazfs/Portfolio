@@ -6,6 +6,8 @@ import About from './pages/About';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Achievements from './pages/Achievements';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -19,7 +21,9 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/skills" element={<Skills />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/achievements" element={<Achievements />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
           </main>
           <Footer />

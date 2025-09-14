@@ -1,4 +1,4 @@
- import { FaGithub, FaLinkedin } from 'react-icons/fa';
+ import { FaGithub, FaLinkedin, FaWhatsapp } from 'react-icons/fa';
  import { SiGmail } from 'react-icons/si';
 
 const Footer = () => {
@@ -10,6 +10,15 @@ const Footer = () => {
         </div>
         
         <div className="flex space-x-4">
+          <a 
+            href="mailto:mnaseef2k02@gmail.com"
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="p-2 text-gray-400 hover:text-white transition-colors duration-300"
+            aria-label="Email"
+          >
+            <SiGmail size={20} />
+          </a>
           <a 
             href="https://github.com/mnazfs" 
             target="_blank" 
@@ -29,13 +38,13 @@ const Footer = () => {
             <FaLinkedin size={20} />
           </a>
           <a 
-            href="mailto:mnaseef2k02@gmail.com"
+            href="https://api.whatsapp.com/send?phone=916238062964"
             target="_blank" 
             rel="noopener noreferrer"
             className="p-2 text-gray-400 hover:text-white transition-colors duration-300"
             aria-label="Email"
           >
-            <SiGmail size={20} />
+            <FaWhatsapp size={20} />
           </a>
         </div>
       </div>

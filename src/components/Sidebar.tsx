@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, User, Code, FolderOpen, Mail, Menu, X } from 'lucide-react';
+import { Home, User, Code, FolderOpen, Mail, Menu, X, Award } from 'lucide-react';
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -10,6 +10,7 @@ const Sidebar = () => {
     { path: '/about', label: 'About', icon: User },
     { path: '/skills', label: 'Skills', icon: Code },
     { path: '/projects', label: 'Projects', icon: FolderOpen },
+    { path: '/achievements', label: 'Achievements', icon: Award },
     { path: '/contact', label: 'Contact', icon: Mail },
   ];
 
