@@ -26,7 +26,7 @@ const Projects = () => {
         'An interdisciplinary team project, where I contributed as the microcontroller programmer ensuring accurate path detection and control.',
       image: LEAP,
       technologies: ['ESP32', 'Arduino IDE'],
-      githubUrl: 'https://github.com/LEAP',
+      githubUrl: 'https://github.com/mnazfs/LEAP',
       date: '2025'
     },
     {
