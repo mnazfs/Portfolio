@@ -26,7 +26,7 @@ const Projects = () => {
         'An interdisciplinary team project, where I contributed as the microcontroller programmer ensuring accurate path detection and control.',
       image: LEAP,
       technologies: ['ESP32', 'Arduino IDE'],
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/LEAP',
       date: '2025'
     },
     {
@@ -47,8 +47,7 @@ const Projects = () => {
         'A MERN stack-based web application developed to digitize and streamline college bus management operations.',
       image: CBMS,
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB'],
-      liveUrl: 'https://cbms.vercel.app',
-      githubUrl: 'https://github.com/mnazfs/cbms',
+      githubUrl: 'https://github.com/mnazfs/CBMS',
       date: '2024'
     }
   ];
