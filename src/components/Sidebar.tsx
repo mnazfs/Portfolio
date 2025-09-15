@@ -1,76 +1,111 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, User, Code, FolderOpen, Mail, Menu, X, Award } from 'lucide-react';
+import { Home, User, Code, FolderOpen, Mail, Award, Menu, X } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 const Sidebar = () => {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const navItems = [
-    { path: '/', label: 'Intro', icon: Home },
-    { path: '/about', label: 'About', icon: User },
-    { path: '/skills', label: 'Skills', icon: Code },
-    { path: '/projects', label: 'Projects', icon: FolderOpen },
-    { path: '/achievements', label: 'Achievements', icon: Award },
-    { path: '/contact', label: 'Contact', icon: Mail },
+    { path: '/', label: 'Intro', icon: Home, index: 0 },
+    { path: '/about', label: 'About', icon: User, index: 1 },
+    { path: '/skills', label: 'Skills', icon: Code, index: 2 },
+    { path: '/projects', label: 'Projects', icon: FolderOpen, index: 3 },
+    { path: '/achievements', label: 'Achievements', icon: Award, index: 4 },
+    { path: '/contact', label: 'Contact', icon: Mail, index: 5 },
   ];
 
-  const toggleSidebar = () => {
-    setIsExpanded(!isExpanded);
-  };
+  const toggleExpand = () => setIsExpanded(!isExpanded);
 
   return (
     <>
-      {/* Mobile Menu Button */}
-      <button
-        onClick={toggleSidebar}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 bg-gray-700 text-white rounded-lg shadow-lg transition-colors"
+      {/* Topbar for small screens (collapsed state) */}
+      <div
+        className={`lg:hidden fixed top-0 left-0 w-full z-50 flex items-center justify-center gap-6 p-3 shadow-md transition-colors duration-300
+        ${isExpanded ? 'bg-black text-gray-200' : 'bg-transparent text-black'}`}
       >
-        {isExpanded ? <X size={24} /> : <Menu size={24} />}
-      </button>
+        {/* Menu Toggle (top-right corner) */}
+        <button
+          onClick={toggleExpand}
+          className="absolute right-4 top-3 p-2 rounded-md"
+        >
+          {isExpanded ? <X size={24} /> : <Menu size={24} />}
+        </button>
 
-      {/* Sidebar */}
-      <div className={`fixed left-0 top-0 h-full ${
-        isExpanded ? 'bg-black w-64 transition-all duration-500' : 'w-16'
-      } lg:w-64 lg:bg-black transition-all duration-500 z-40`}>
-        <div className="flex flex-col">
-          {/* Navigation */}
-          <nav className="mt-20 flex-1 p-4">
-            <ul className="space-y-2">
-              {navItems.map(({ path, label, icon: Icon }) => (
-                <li key={path}>
-                  <NavLink
-                    to={path}
-                    onClick={() => setIsExpanded(false)}
-                    className={({ isActive }) =>
-                      `flex items-center p-3 rounded-lg transition-colors duration-300 hover:bg-gray-700 ${
-                        isActive ? 'bg-gray-300 lg:bg-gray-500 text-white' : 'text-white'
-                      } ${!isExpanded && window.innerWidth < 1024 ? 'justify-center' : 'justify-start'}`
-                    }
-                  >
-                    <Icon
-                      size={20}
-                      className={`transition-colors duration-300 
-                        ${isExpanded || window.innerWidth >= 1024 ? 'text-white' : 'text-black'}
-                      `}
-                    />
-                    <span className={`ml-3 text-white ${!isExpanded && window.innerWidth < 1024 ? 'hidden' : 'block'}`}>
-                      {label}
-                    </span>
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
+        {/* Collapsed nav icons row */}
+        {!isExpanded && (
+          <nav className="flex flex-row justify-between w-full mr-20">
+            {navItems.map(({ path, icon: Icon }) => (
+              <NavLink
+                key={path}
+                to={path}
+                className={({ isActive }) =>
+                  `flex flex-col items-center text-xs px-3 py-2 rounded-lg transition-colors duration-300 ${
+                    isActive
+                      ? 'bg-gray-500 text-white'
+                      : 'text-black hover:text-gray-700'
+                  }`
+                }
+              >
+                <Icon size={22} />
+              </NavLink>
+            ))}
           </nav>
-        </div>
+        )}
       </div>
 
-      {/* Mobile Overlay */}
+      {/* Expanded full-screen overlay menu */}
       {isExpanded && (
-        <div 
-          className="lg:hidden fixed inset-0 bg-black bg-opacity-50 z-30"
-          onClick={toggleSidebar}
-        />
+        <motion.div className="lg:hidden fixed inset-0 bg-black text-gray-200 z-40 flex flex-col mt-6 space-y-6 pt-10"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.3 }}>
+          <nav className="flex flex-col space-y-6 text-lg">
+            {navItems.map(({ path, label, icon: Icon, index }) => (
+              <NavLink
+                key={path}
+                to={path}
+                onClick={() => setIsExpanded(false)}
+                className={({ isActive }) =>
+                  `flex items-center gap-3 px-6 py-3 rounded-lg transition-colors duration-300 ${
+                    isActive
+                      ? 'bg-gray-500 text-white'
+                      : 'text-gray-200 hover:bg-gray-700'
+                  }`
+                }
+              >
+                <motion.div
+                  initial={{ y: 20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  transition={{ duration: 0.3, delay: index * 0.1 }}>
+                  <Icon size={24} />
+                  <span>{label}</span>
+                </motion.div>
+              </NavLink>
+            ))}
+          </nav>
+        </motion.div>
       )}
+
+      {/* Sidebar for large screens */}
+      <div className="hidden lg:flex fixed left-0 top-0 h-full w-64 bg-black text-white z-40 flex-col">
+        <nav className="mt-20 flex-1 p-4 space-y-2">
+          {navItems.map(({ path, label, icon: Icon }) => (
+            <NavLink
+              key={path}
+              to={path}
+              className={({ isActive }) =>
+                `flex items-center p-3 rounded-lg transition-colors duration-300 hover:bg-gray-700 ${
+                  isActive ? 'bg-gray-500 text-white' : 'text-white'
+                }`
+              }
+            >
+              <Icon size={20} />
+              <span className="ml-3">{label}</span>
+            </NavLink>
+          ))}
+        </nav>
+      </div>
     </>
   );
 };

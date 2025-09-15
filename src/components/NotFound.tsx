@@ -14,7 +14,7 @@ export default function NotFound() {
         <Lottie
           animationData={animationData}
           loop={true}
-          className="w-100 h-100"
+          className="w-60 h-60 mt-40 sm:mt-50 lg:mt-0 sm:w-80 sm:h-80 lg:w-100 lg:h-100"
         />
       </motion.div>
 
