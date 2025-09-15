@@ -15,15 +15,7 @@ function App() {
       <div className="flex flex-col min-h-screen bg-gray-100">
         <div className="flex flex-1">
           <Sidebar />
-          <div
-            className="
-              flex-1 flex flex-col 
-              pt-14          /* Push content down below topbar on mobile */
-              lg:pt-0        /* Remove top padding on large screens */
-              lg:ml-64       /* Push content right for sidebar on desktop */
-              transition-all duration-300
-            "
-          >
+          <div className="flex-1 flex flex-col pt-14 lg:pt-0 lg:ml-64 mt-10 lg:mt-0 transition-all duration-300">
             <main className="flex-1 p-4 lg:p-8">
               <Routes>
                 <Route path="/" element={<Intro />} />

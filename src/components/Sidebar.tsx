@@ -24,17 +24,17 @@ const Sidebar = () => {
         className={`lg:hidden fixed top-0 left-0 w-full z-50 flex items-center justify-center gap-6 p-3 shadow-md transition-colors duration-300
         ${isExpanded ? 'bg-black text-gray-200' : 'bg-transparent text-black'}`}
       >
-        {/* Menu Toggle (top-right corner) */}
+        {/* Menu Toggle (top-right corner)
         <button
           onClick={toggleExpand}
           className="absolute right-4 top-3 p-2 rounded-md"
         >
           {isExpanded ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        </button> */}
 
         {/* Collapsed nav icons row */}
         {!isExpanded && (
-          <nav className="flex flex-row justify-between w-full mr-20">
+          <nav className="flex flex-row justify-between w-full">
             {navItems.map(({ path, icon: Icon }) => (
               <NavLink
                 key={path}
@@ -55,7 +55,7 @@ const Sidebar = () => {
       </div>
 
       {/* Expanded full-screen overlay menu */}
-      {isExpanded && (
+      {/* {isExpanded && (
         <motion.div className="lg:hidden fixed inset-0 bg-black text-gray-200 z-40 flex flex-col mt-6 space-y-6 pt-10"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -85,7 +85,7 @@ const Sidebar = () => {
             ))}
           </nav>
         </motion.div>
-      )}
+      )} */}
 
       {/* Sidebar for large screens */}
       <div className="hidden lg:flex fixed left-0 top-0 h-full w-64 bg-black text-white z-40 flex-col">
