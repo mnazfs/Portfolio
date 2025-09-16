@@ -20,7 +20,7 @@ const Sidebar = () => {
     <>
       {/* Topbar for small screens (collapsed state) */}
       <div
-        className={`lg:hidden fixed top-0 left-0 w-full z-50 flex items-center justify-center gap-6 p-3 shadow-md transition-colors duration-300
+        className={`lg:hidden fixed top-0 left-0 w-screen z-50 flex items-center justify-center gap-6 p-3 shadow-md transition-colors duration-300
         ${isExpanded ? 'bg-black text-gray-200' : 'bg-white text-black'}`}
       >
         {/* Menu Toggle (top-right corner) */}
@@ -33,7 +33,7 @@ const Sidebar = () => {
 
         {/* Collapsed nav icons row */}
         {!isExpanded && (
-          <nav className="flex flex-row justify-between w-full scroll-smooth">
+          <nav className="flex flex-row justify-between w-screen mr-7 overflow-hidden scroll-smooth">
             {navItems.map(({ path, icon: Icon }) => (
               <a
                 key={path}

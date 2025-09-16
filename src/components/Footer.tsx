@@ -3,7 +3,7 @@
 
 const Footer = () => {
   return (
-    <footer className="bg-black px-4 lg:px-8 py-6 z-50 bottom-0 w-full">
+    <footer className="bg-black px-4 lg:px-8 py-6 z-50 bottom-0 w-screen">
       <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
         <div className="text-white text-sm">
           <p>&copy; V S Muhammed Naseef 2025 <span className='text-gray-400'>| Design by V S Muhammed Naseef</span></p>

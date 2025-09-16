@@ -10,7 +10,7 @@ import { motion } from 'framer-motion';
 
 function App() {
   return (
-    <div className="flex flex-col min-h-screen bg-gray-100">
+    <div className="flex flex-col min-h-screen bg-gray-100 overflow-x-hidden">
       <div className="flex flex-1">
         <Sidebar />
         <div className="flex-1 flex flex-col pt-14 lg:pt-0 lg:ml-64 mt-10 lg:mt-0 transition-all duration-300">

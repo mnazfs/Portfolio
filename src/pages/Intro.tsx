@@ -77,7 +77,7 @@ const Intro = () => {
                     <Download size={20} className="mr-2" />
                     Resume
                 </motion.a>
-                <div className="flex space-x-4 lg:ml-10">
+                <div className="flex flex-row justify-between space-x-4 lg:ml-10">
                   <a 
                     href="mailto:mnaseef2k02@gmail.com"
                     target="_blank" 
