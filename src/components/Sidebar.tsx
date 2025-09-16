@@ -33,7 +33,7 @@ const Sidebar = () => {
 
         {/* Collapsed nav icons row */}
         {!isExpanded && (
-          <nav className="flex flex-row justify-between w-screen mr-7 overflow-hidden scroll-smooth">
+          <nav className="flex flex-row justify-between w-screen overflow-hidden scroll-smooth">
             {navItems.map(({ path, icon: Icon }) => (
               <a
                 key={path}
