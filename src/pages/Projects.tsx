@@ -16,7 +16,6 @@ const Projects = () => {
         'A community website for μLearn GECI built with the MERN stack to connect students, share resources, and organize campus activities.',
       image: Mulearn,
       technologies: ['React', 'Node.js', 'Express.js', 'MongoDB', 'Tailwind CSS'],
-      liveUrl: 'https://mulearngeci.vercel.app',
       date: '2025'
     },
     {
