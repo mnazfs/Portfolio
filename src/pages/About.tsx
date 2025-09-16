@@ -110,7 +110,7 @@ const About = () => {
         </div>
       </div>
 
-      <motion.div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8"
+      {/* <motion.div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-2xl p-8"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -170,7 +170,7 @@ const About = () => {
             <p className="text-sm text-gray-600">Contributing to the developer community</p>
           </motion.div>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

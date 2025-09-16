@@ -1,8 +1,13 @@
- import { Download } from 'lucide-react';
- import Profile from '../images/Naseef.jpg'
- import { motion } from 'framer-motion';
+import { Download } from 'lucide-react';
+import Profile from '../images/Naseef.jpg'
+import { motion } from 'framer-motion';
+import useTyped from '../hooks/useTyped';
+import { FaLinkedin, FaGithub, FaWhatsapp } from 'react-icons/fa';
+import { SiGmail } from 'react-icons/si';
 
 const Intro = () => {
+  const typedRef = useTyped(["Computer Engineer", "Fullstack Developer"]);
+
   return (
     <div className="min-h-full flex flex-col">
       {/* Hero Section */}
@@ -42,21 +47,23 @@ const Intro = () => {
                   Muhammed Naseef
                 </motion.h1>
               
-              <motion.h2 className="font-montserrat text-xl lg:text-2xl text-gray-600 mb-6 font-bold"
+              <motion.h2 
+                className="font-montserrat text-xl lg:text-2xl text-gray-600 mb-6 font-bold"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}>
-                Computer Engineer | Fullstack Developer
+                transition={{ duration: 0.5, delay: 0.4 }}
+              >
+                <span ref={typedRef}></span>
               </motion.h2>
               
-              <motion.p className="text-lg text-gray-700 mb-8 leading-relaxed"
+              {/* <motion.p className="text-lg text-gray-700 mb-8 leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.6 }}>
                 Aspiring Computer Engineer and Fullstack Developer passionate about building efficient solutions with strong foundations in algorithms and problem-solving.
-              </motion.p>
+              </motion.p> */}
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <motion.a
@@ -70,6 +77,44 @@ const Intro = () => {
                     <Download size={20} className="mr-2" />
                     Resume
                 </motion.a>
+                <div className="flex space-x-4 lg:ml-10">
+                  <a 
+                    href="mailto:mnaseef2k02@gmail.com"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-red-500 transition-colors duration-300"
+                    aria-label="Email"
+                  >
+                    <SiGmail size={30} />
+                  </a>
+                  <a 
+                    href="https://github.com/mnazfs" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-gray-900 transition-colors duration-300"
+                    aria-label="GitHub"
+                  >
+                    <FaGithub size={30} />
+                  </a>
+                  <a 
+                    href="https://www.linkedin.com/in/v-s-muhammed-naseef-03b90221b" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-blue-600 transition-colors duration-300"
+                    aria-label="LinkedIn"
+                  >
+                    <FaLinkedin size={30} />
+                  </a>
+                  <a 
+                    href="https://api.whatsapp.com/send?phone=916238062964"
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="p-2 text-gray-400 hover:text-green-500 transition-colors duration-300"
+                    aria-label="WhatsApp"
+                  >
+                    <FaWhatsapp size={30} />
+                  </a>
+                </div>
               </div>
             </div>
           </div>

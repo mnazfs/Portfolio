@@ -151,7 +151,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 rounded-lg hover:bg-[#333333] hover:text-white transition-colors duration-500"
                 aria-label="GitHub"
-                whileHover={{ scale: 1.1, rotate: 5 }}
+                whileHover={{ scale: 1.1 }}
               >
                 <FaGithub size={20} />
               </motion.a>
@@ -161,7 +161,7 @@ const Contact = () => {
                 rel="noopener noreferrer"
                 className="p-3 bg-gray-100 rounded-lg hover:bg-[#0077B5] hover:text-white transition-colors duration-500"
                 aria-label="LinkedIn"
-                whileHover={{ scale: 1.1, rotate: -5 }}
+                whileHover={{ scale: 1.1 }}
               >
                 <FaLinkedin size={20} />
               </motion.a>

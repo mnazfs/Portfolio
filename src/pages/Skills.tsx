@@ -1,10 +1,11 @@
-import { Code, Wrench, Globe, Cpu } from 'lucide-react';
+import { Code, Wrench, Globe, Cpu, Lightbulb } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Assembly from '../assets/assembly-svgrepo-com.svg';
 import API from '../assets/api-app-svgrepo-com.svg';
 import Render from '../assets/render-community-large-icon.svg';
 import ML from '../assets/machine-learning-svgrepo-com.svg';
-import DL from '../assets/deep-learning-svgrepo-com.svg';
+import CV from '../assets/web-eye-svgrepo-com.svg';
+import GIS from '../assets/qgis-svgrepo-com.svg';
 
 // Type definitions
 type Skill = {
@@ -56,8 +57,6 @@ const skillCategories: SkillCategory[] = [
     icon: Cpu,
     color: 'purple',
     skills: [
-      { name: 'Machine Learning', svg: ML },
-      { name: 'Deep Learning', svg: DL },
       { name: 'Microcontroller Programming', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/arduino/arduino-original.svg' }
     ]
   },
@@ -70,6 +69,16 @@ const skillCategories: SkillCategory[] = [
       { name: 'VS Code', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
       { name: 'Vercel', svg: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg' },
       { name: 'Render', svg: Render }
+    ]
+  },
+  {
+    title: 'Currently Learning Domains',
+    icon: Lightbulb,
+    color: 'green',
+    skills: [
+      { name: 'Machine Learning', svg: ML },
+      { name: 'Computer Vision', svg: CV },
+      { name: 'Geographic Information Systems', svg: GIS }
     ]
   }
 ];
